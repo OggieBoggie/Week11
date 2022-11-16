@@ -27,14 +27,14 @@
 // let areaParagraph = document.querySelector('#result');
 // areaParagraph.textContent += calculatedArea;
 
-let shoppingItems = ["cheese" , "chicken" , "chair"];
+let shoppingItems = ["cheese" , "green chicken" , "chair" , "lawn mower"];
 
 const shoppingListElement = document.querySelector(".shopping")
 function populateList(arr)
 {
     for (let item of arr) {
     let listItem = document.createElement("li");
-    listItem.textcontent = item;
+    listItem.textContent = item;
     shoppingListElement.appendChild(listItem);
     }
 }
@@ -48,3 +48,14 @@ function changeListStyle()
 }
 
 changeListStyle()
+
+function makeGreen()
+{
+    const allListItems = document.querySelectorAll(".shopping li")
+    for (let i = 0; i < allListItems.length; i++)
+    if (allListItems[i].textContent.includes("green")) {
+        allListItems[i].classList.add("green");
+    }
+}
+
+makeGreen()
