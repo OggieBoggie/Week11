@@ -13,12 +13,16 @@
 // greet(user, time);
 
 
-
-const calcArea = function(radius) {
-    let result = Math.pi * radius * radius;
+function calcArea(radius) {
+    let result = Math.PI * radius * radius;
     return result;
 }
 
 let r = prompt("Enter the radius of circle");
 let calculatedArea = calcArea(r).toFixed(2);
 alert(`The area of a circle with radius ${r} is ${calculatedArea}`);
+
+let radiusParagraph = document.querySelector('#radius');
+radiusParagraph.textContent += r;
+let areaParagraph = document.querySelector('#result');
+areaParagraph.textContent += calculatedArea;
