@@ -3,10 +3,11 @@
 //     console.log (`Hello, ${person_name}!`);
 // }
 
-const greet = function(user) {
-    console.log (`Hello, ${user}!`);
-}
 
+const greet = function(user, time = "day") {
+    console.log (`Good ${time} ${user}!`);
+}
+let time = prompt("What time is it")
 let user = prompt("Who are you?");
-greet(user);
+greet(user, time);
 
